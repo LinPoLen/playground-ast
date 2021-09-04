@@ -29,7 +29,7 @@ glob('source-code/**/*.php', {
   files.forEach(it => {
     const code = fs.readFileSync(resolve(__dirname, join(ROOT, it)), 'utf8');
 
-    if (!(code.includes('class') || code.includes('interface'))) {
+    if (!(code.includes('class') || code.includes('interface') || code.includes('trait'))) {
       return;
     }
     let node;
